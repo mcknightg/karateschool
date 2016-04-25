@@ -1,0 +1,52 @@
+
+
+<!-- id name school rank avatar gender birthday isInstructor owner  -->
+
+<form name="form" role="form" novalidate  class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength" ng-submit="create()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="back()">&times;</button>
+        <h4 class="modal-title" id="myDeviceLabel">Create or edit a Student</h4>
+    </div>
+    <div class="modal-body">
+            <div class="form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" name="id"  ng-model="modelData.id" readonly>
+            </div>
+            <div class="form-group">
+                <label>name</label>
+                <input type="text" class="form-control" name="name" ng-model="modelData.name" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>rank</label>
+                <input type="text" class="form-control" name="rank" ng-model="modelData.rank" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>avatar</label>
+                <input type="text" class="form-control" name="avatar" ng-model="modelData.avatar" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>gender</label>
+                <input type="text" class="form-control" name="gender" ng-model="modelData.gender" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>birthday</label>
+                <input type="date" class="form-control" name="birthday" placeholder="yyyy/MM/dd"    ng-model="modelData.birthday">
+            </div>
+            <div class="form-group">
+                <label>isInstructor</label>
+                <input type="checkbox" class="form-control" name="isInstructor" ng-model="modelData.isInstructor">
+            </div>
+            <div class="form-group">
+                <label>owner</label>
+                <input type="checkbox" class="form-control" name="owner" ng-model="modelData.owner">
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="back()">
+            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+        </button>
+        <button ng-disabled="form.$invalid" class="btn btn-primary" ng-click="save()">
+            <span class="glyphicon glyphicon-save"></span> Save
+        </button>
+    </div>
+</form>
